@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+}
+
+.puzzle {
+    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 333px);
+    justify-content: center;
+}
+
+.element {
+    width: 333px;
+    height: 333px;
+    background-color: aqua;
+    display: inline-block;
+    transition: transform 80ms;
+}
+
+.finish_div {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    justify-content: center;
+    background-color: lightgray;
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button_new {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: lightgray;
+    border: 3px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    border-radius: 25px;
+}

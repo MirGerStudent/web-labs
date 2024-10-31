@@ -1,0 +1,11 @@
+console.log("Задача 7");
+var rus_days : any[] = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+var eng_days : any[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var rus_days_str : any = rus_days.toString();
+console.log(`Исходный массив на русском: ${rus_days_str.replaceAll(",", " ")}`);
+var eng_days_str : any = rus_days.toString();
+console.log(`Исходный массив на английском: ${eng_days_str.replaceAll(",", " ")}`);
+var rus_days_sort_arr : any = rus_days.sort().toString();
+console.log(`Отсортированный массив на русском: ${rus_days_sort_arr.replaceAll(",", " ")}`);
+var eng_days_sort_arr : any = eng_days.sort().toString();
+console.log(`Отсортированный массив на английском: ${eng_days_sort_arr.replaceAll(",", " ")}`);
