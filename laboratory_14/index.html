@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>laboratory 14</title>
+</head>
+
+<body>
+    <table class="score_board">
+        <thead>
+            <tr>
+                <th>Игрок</th>
+                <th>Победы</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Кошка (X)</td>
+                <td id="catScore">0</td>
+            </tr>
+            <tr>
+                <td>Собака (O)</td>
+                <td id="dogScore">0</td>
+            </tr>
+            <tr>
+                <td>Раунды</td>
+                <td id="rounds">0</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div class="game-container">
+        <p id="message"></p>
+        <div id="board" class="board"></div>
+        <button id="resetBtn">Сбросить игру</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
