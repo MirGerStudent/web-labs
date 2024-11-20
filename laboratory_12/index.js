@@ -44,7 +44,7 @@ class Calculator {
         this.operations['*'] = new MultiplyOperation();
         this.operations['/'] = new DivideOperation();
         this.operations['^'] = new PowerOperation();
-        this.operations['√'] = new SquareRootOperation();
+        this.operations['√'] = new RootOperation();
         this.operations['sin'] = new SinOperation();
         this.operations['cos'] = new CosOperation();
         this.operations['tg'] = new TgOperation();
@@ -60,8 +60,7 @@ class Calculator {
                 stack.push(parseFloat(token));
             } else if (this.operations[token]) {
                 const operation = this.operations[token];
-                const argsCount = operation instanceof SquareRootOperation || 
-                                  operation instanceof SinOperation || operation instanceof CosOperation || 
+                const argsCount = operation instanceof SinOperation || operation instanceof CosOperation || 
                                   operation instanceof TgOperation || operation instanceof CtgOperation ? 1 : 2;
                 
                 const args = [];
@@ -181,10 +180,22 @@ class PowerOperation extends Operation {
     }
 }
 
-class SquareRootOperation extends Operation {
-    execute(a) {
-        if (a < 0) throw new Error("Невозможно извлечь квадратный корень из отрицательного числа");
-        return Math.sqrt(a);
+// class SquareRootOperation extends Operation {
+//     execute(a) {
+//         if (a < 0) throw new Error("Невозможно извлечь квадратный корень из отрицательного числа");
+//         return Math.sqrt(a);
+//     }
+// }
+
+class RootOperation extends Operation {
+    execute(degree, value) {
+        if (degree === 0) {
+            throw new Error("Степень не может быть равна нулю.");
+        }
+        if (value < 0 && degree % 2 === 0) {
+            throw new Error("Невозможно извлечь четный корень из отрицательного числа.");
+        }
+        return Math.pow(value, 1 / degree);
     }
 }
 
