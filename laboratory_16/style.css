@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(blanchedalmond, burlywood, coral, chocolate);
+}
+
+.inputs {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.pincode_input {
+    width: 46%;
+    background-color: blanchedalmond;
+    border-radius: 0.8rem;
+    border: 0.3rem solid burlywood;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.pincode {
+    width: 40%;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.num_elem {
+    padding: 0.5rem;
+    font-size: 2rem;
+    background-color: coral;
+    border: 0.3rem solid chocolate;
+    border-radius: 0.8rem;
+}
+
+.num_elem:hover {
+    background-color: blanchedalmond;
+    border-color: burlywood;
+}
