@@ -1,0 +1,82 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff6b6b, #f7d94c); /* Градиентный фон */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.btn,
+.rules {
+  background-color: #4caf50; /* Зеленый цвет */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* Плавный переход */
+  cursor: pointer;
+  border-radius: 8px; /* Закругленные углы */
+}
+
+.btn:hover,
+.rules:hover {
+  background-color: white; /* Цвет фона при наведении */
+  color: black; /* Цвет текста при наведении */
+  border: 2px solid #4caf50; /* Граница при наведении */
+}
+
+#input_number {
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  transition-duration: 0.4s;
+}
+
+#input_number:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+#input_number::-webkit-outer-spin-button,
+#input_number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+  /* margin: 0; */
+}
+
+.records {
+  height: 32rem;
+  width: 20rem;
+  overflow: auto;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rules_div {
+            display: none; /* Скрываем текст правил по умолчанию */
+            margin-top: 20px; /* Отступ сверху для текста правил */
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для текста правил */
+            border-radius: 8px; /* Закругленные углы для текста правил */
+        }

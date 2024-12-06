@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>laboratory_15</title>
+</head>
+
+<body>    
+    <div class="rules_div" id="rulesText">
+        <h3>Правила игры:</h3>
+        <p>1. Игроки по очереди вводят числа от 1000 до 9999.</p>
+        <p>2. После каждого ввода система сообщает количество "быков" и "коров".</p>
+        <p>3. "Быки" — это цифры на правильных позициях.</p>
+        <p>4. "Коровы" — это цифры, которые есть в числе, но стоят не на своих местах.</p>
+        <p>5. Побеждает тот, кто первым угадает загаданное число!</p>
+    </div>
+    <div class="container">
+        <div class="field">
+            <input type="number" name="input" id="input_number" min="1000" max="9999" maxlength="4" minlength="4"
+                size="10">
+            <button type="button" class="btn">Отправить</button>
+        </div>
+        <table class="records">
+            <tbody>
+                <tr class="line">
+                    <th>Ход</th>
+                    <th>Число</th>
+                    <th>🐂 Быки</th>
+                    <th>🐄 Коровы</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="rules" id="rulesButton">Правила игры</button>
+    <script src="./index.js"></script>
+</body>
+
+</html>
